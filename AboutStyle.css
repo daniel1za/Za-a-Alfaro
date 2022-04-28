@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2? family= Poppins:wght@200;300;400;600;700 & display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    margin: 0;
+    background-color: #F4F7F2;
+}
+
+/* menu navegacion */
+#cabecera{
+    width: 100%;
+    position: fixed;
+    left: 0%;
+    top: 0%;
+    z-index: 999;
+    background-color: #F4F7F2;
+}
+#navegacion{
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+#navegacion img{
+    width: 75%;
+}
+.menu{
+    width: 100%;
+}
+
+    /* hamburguesa movil */
+    #btn-menu{
+        display: none;
+    }
+    #movil{
+        font-size: 30px;
+        cursor: pointer;
+        display: none;
+        text-align: right;
+        color: rgb(0, 0, 0);
+    }
+        /* */
+
+.menu ul{
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+.menu ul li a{
+    display: block;
+    line-height: 85px;
+    padding: 0 20px;
+    color: #000000;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+}
+.menu a:hover{
+    background-color: #84B6F4;
+    color: #ffffff;
+    border-bottom: #3d6aa1;
+}
+/* Para movil */
+@media (max-width: 1087px){
+    #cabecera{
+        justify-content: space-between;
+    }
+    #navegacion img{
+        width: 20%;
+        display: block;
+        padding-left: 30px;
+    }
+    .menu{
+        position: absolute;
+        top: 100%;
+        transform: translateX(-100%);
+        transition: all 0.5s;
+    }
+    .menu ul{
+        flex-direction: column;
+        opacity: 75%;
+    }
+    .menu ul li a{
+        line-height: 45px;
+        padding: 0 20px;
+        border-bottom: 2px solid #3d6aa1;
+        font-weight: 550;
+    }
+    #movil{
+        display: block;
+        margin-left: 60%;
+    }
+    .menu a:hover{
+        background-color: #84B6F4;
+        color: #ffffff;
+    }
+}
+#btn-menu:checked ~ .menu{
+    transform: translateX(0%);
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #F4F7F2;
+}
+.li a button{
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: none;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+}
+/* ------------------- */
+/* -- QUIENES SOMOS -- */
+
+.section{
+    width: 100%;
+    margin: 0;
+}
+.seccionQuienesSomos{
+    background-image: url(./img/SobreNostros/sobreDESENFOCADOWEB\ 1.png);
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+.cuadro{
+    position: absolute;
+    width: 900px;
+    height: 460px;
+    left: 213px;
+    top: 140px;
+    background-color: #000000de;
+}
+.destacado img{
+    display: block;
+    position: absolute;
+    width: 380px;
+    height: 248px;
+    left: 54%;
+    bottom: 22%;
+}
+.destacado h2{
+    width: 100%;
+    color: #ffffff;
+    display: block;
+    font-size: 50px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 8%;
+}
+.tit2{
+    color: #84B6F4;
+}
+.destacado p{
+    width: 90%;
+    margin-left: 5%;
+    font-size: 24px;
+    line-height: 35px;
+    text-align: justify;
+    color: #ffffff;
+}
+
+/* --------------------------------- */
+/* -- Por que confiar en nosotros -- */
+.nosotros{
+    width: 50%;
+}
+.nosotros h3{
+    width: 100%;
+    display: block;
+    font-size: 40px;
+    font-weight: 500;
+    margin-top: 2%;
+    margin-left: 2%;
+}
+.contenedor{
+    width: 100%;
+    display: flex;
+}
+.caja{
+    width: 20%;
+    margin-left: 5%;
+    padding: 3%;
+    text-align: justify;
+}
+.caja p{
+    display: block;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 25px;
+
+}
+.caja:hover{
+    background-color: #c4c4c4;
+}
+
+/* -------------------- */
+/* -- Nuestro Equipo -- */
+.equipo{
+    width: 100%;
+}
+.equipo h2{
+    width: 100%;
+    display: block;
+    font-size: 60px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 2%;
+}
+.part{
+    width: 80%;
+    display: flex;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-bottom: 10%;
+}
+.foto{
+    margin-left: 25%;
+}
+
+/* --------------- */
+/* -- Copyright -- */
+#copy{
+    background-color: #191919;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+#copy img{
+    width: 75%;
+    margin-left: 50%;
+}
+.texto{
+    width: 100%;
+}
+.texto ul{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-left: 15%;
+}
+.texto ul li a{
+    display: block;
+    line-height: 85px;
+    padding: 0 20px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 500;
+}
